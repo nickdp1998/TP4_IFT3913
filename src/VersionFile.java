@@ -15,7 +15,7 @@ public class VersionFile extends Writer {
      */
     private VersionFile() {
         super("versions.csv");
-        super.add("id_version, NC");
+        super.add("id_version,NC,mWMC,mcBC");
     }
     //endregion
 

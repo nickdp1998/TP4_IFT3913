@@ -2,36 +2,67 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Properties;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 
         VersionFile versionFile = VersionFile.getInstance();
-        String url = "https://github.com/jfree/jfreechart.git";
+        String url = args[0];
         String currentPath = System.getProperty("user.dir");
         String pathRepo = currentPath+"\\Repo";
 
         String[] version;
+        String javaVersion = "";
+        int total = 0;
+
+        try (InputStream config = new FileInputStream("config.properties")){
+            Properties properties = new Properties();
+            properties.load(config);
+
+            javaVersion = properties.getProperty("javaVersion");
+            total = Integer.parseInt(properties.getProperty("total"));
+        } catch(Exception e) {
+            System.out.println(e);
+        }
 
         try {
 
             cloneGit(url, pathRepo);
 
             version = gitVersion(pathRepo);
-            int currentNbClass;
-            int total = 1;
+
+            //Random index
+            total = Math.min(total,version.length);
+            int[] index = new int[total];
+            float space = ((float) version.length)/((float) total);
 
             for(int i = 0; i < total; i++) {
-                String currentVersion = version[i];
-                gitReset(currentVersion, pathRepo, i, total);
+                index[i] = Math.round(space * i);
+            }
+            Arrays.sort(index);
+
+            //Calcul des métriques et écriture
+            int currentNbClass;
+
+            for(int i = 0; i < total; i++) {
+                String currentVersion = version[index[i]];
+                gitReset(currentVersion, pathRepo, i, total, index[i]);
+
                 currentNbClass = nbClass(pathRepo);
-                versionFile.add(currentVersion+","+currentNbClass);
-                runMetric(currentPath, pathRepo);
+
+                runMetric(currentPath, pathRepo, javaVersion);
+                float[] sumMetric = sumMetric();
+                sumMetric[0] /= (float) currentNbClass;
+                sumMetric[1] /= (float) currentNbClass;
+
+                versionFile.add(currentVersion+","+currentNbClass+','+sumMetric[0]+","+sumMetric[1]);
+
             }
             versionFile.closeWriter();
 
-            //deleteGit(pathRepo);
+            deleteGit(pathRepo);
 
         } catch(Exception e) {
             System.out.println(e);
@@ -91,13 +122,13 @@ public class Main {
         return version;
     }
 
-    public static void gitReset(String version, String path, int current, int total) {
+    public static void gitReset(String version, String path, int current, int total, int index) {
 
         Runtime rt = Runtime.getRuntime();
 
         try{
 
-            System.out.println("Git reset en cours " + current + " de " + total +"  ...");
+            System.out.println("Git reset en cours " + current + " de " + total +"\nNuméro de l'index : "+index+" ...");
             String[] cmd = {"cmd.exe", "/c", "cd "+path+" && git reset --hard " + version};
             Process proc = rt.exec(cmd);
             proc.waitFor();
@@ -126,16 +157,10 @@ public class Main {
 
     }
 
-    public static void runMetric(String jarPath, String repoPath) {
+    public static void runMetric(String jarPath, String repoPath, String javaVersion) {
 
-        Runtime rt = Runtime.getRuntime();
 
-        try (InputStream config = new FileInputStream("config.properties")){
-
-            Properties properties = new Properties();
-            properties.load(config);
-
-            String javaVersion = properties.getProperty("javaVersion");
+        try{
 
             System.out.println("Calcule des métrique ...");
 
@@ -155,6 +180,33 @@ public class Main {
         } catch(Exception e) {
             System.out.println(e);
         }
+
+    }
+
+    public static float[] sumMetric() {
+
+        float[] sums = {0,0};
+
+        try{
+
+            FileReader fr = new FileReader("classes.csv");
+            BufferedReader reader = new BufferedReader(fr);
+
+            String s = reader.readLine();
+
+            while((s = reader.readLine()) != null) {
+
+                String[] split = s.split(",");
+                sums[0] += Float.parseFloat(split[5]);
+                sums[1] += Float.parseFloat(split[6]);
+
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return sums;
 
     }
 
