@@ -1,8 +1,7 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Properties;
 
 public class Main {
 
@@ -21,17 +20,18 @@ public class Main {
 
             version = gitVersion(pathRepo);
             int currentNbClass;
-            int total = 10;
+            int total = 1;
 
             for(int i = 0; i < total; i++) {
                 String currentVersion = version[i];
                 gitReset(currentVersion, pathRepo, i, total);
                 currentNbClass = nbClass(pathRepo);
                 versionFile.add(currentVersion+","+currentNbClass);
+                runMetric(currentPath, pathRepo);
             }
             versionFile.closeWriter();
 
-            deleteGit(pathRepo);
+            //deleteGit(pathRepo);
 
         } catch(Exception e) {
             System.out.println(e);
@@ -119,6 +119,38 @@ public class Main {
             String[] cmd = {"cmd.exe", "/c", "rmdir /s /q "+path};
             rt.exec(cmd);
             System.out.println("rmdir fini !\n");
+
+        } catch(Exception e) {
+            System.out.println(e);
+        }
+
+    }
+
+    public static void runMetric(String jarPath, String repoPath) {
+
+        Runtime rt = Runtime.getRuntime();
+
+        try (InputStream config = new FileInputStream("config.properties")){
+
+            Properties properties = new Properties();
+            properties.load(config);
+
+            String javaVersion = properties.getProperty("javaVersion");
+
+            System.out.println("Calcule des métrique ...");
+
+            Process proc;
+            if(javaVersion.equals("")) {
+                ProcessBuilder pb = new ProcessBuilder("java", "-jar", "IFT3913_TP1.jar",repoPath);
+                pb.directory(new File(jarPath));
+                proc = pb.start();
+            } else {
+                ProcessBuilder pb = new ProcessBuilder(javaVersion, "-jar", "IFT3913_TP1.jar",repoPath);
+                pb.directory(new File(jarPath));
+                proc = pb.start();
+            }
+            proc.waitFor();
+            System.out.println("Calcule des métriques fini !\n");
 
         } catch(Exception e) {
             System.out.println(e);
