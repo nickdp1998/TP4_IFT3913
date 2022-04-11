@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //region Variables
         VersionFile versionFile = VersionFile.getInstance();
         String url = args[0];
         String currentPath = System.getProperty("user.dir");
@@ -16,39 +17,57 @@ public class Main {
         String[] version;
         String javaVersion = "";
         int total = 0;
+        //endregion
 
+        //region Config.properties
         try (InputStream config = new FileInputStream("config.properties")){
             Properties properties = new Properties();
             properties.load(config);
 
-            javaVersion = properties.getProperty("javaVersion");
-            total = Integer.parseInt(properties.getProperty("total"));
+            javaVersion = properties.getProperty("javaPath");
+            total = Integer.parseInt(properties.getProperty("sampleSize"));
         } catch(Exception e) {
             System.out.println(e);
         }
+        //endregion
 
         try {
 
             cloneGit(url, pathRepo);
 
             version = gitVersion(pathRepo);
+            int nbVersion = version.length;
 
-            //Random index
-            total = Math.min(total,version.length);
+            //region Choix des versions
+            total = Math.min(total, nbVersion);
+            Random r = new Random();
             int[] index = new int[total];
-            float space = ((float) version.length)/((float) total);
 
-            for(int i = 0; i < total; i++) {
-                index[i] = Math.round(space * i);
+            //Random si moins de 50% du nb de version, sinon distances égales
+            if((float) total < 0.5*((float) nbVersion)) {
+                for (int i = 0; i < total; i++) {
+                    int currentRandom = r.nextInt(nbVersion);
+                    if (Arrays.asList(index).contains(currentRandom)) {
+                        i--;
+                    } else {
+                        index[i] = currentRandom;
+                    }
+                }
+                Arrays.sort(index);
+            } else {
+                float distance = ((float) nbVersion)/((float) total);
+                for(int i = 0; i < total; i++) {
+                    index[i] = Math.round(distance*i);
+                }
             }
-            Arrays.sort(index);
+            //endregion
 
-            //Calcul des métriques et écriture
+            //region Calcul des métriques et écriture
             int currentNbClass;
 
             for(int i = 0; i < total; i++) {
                 String currentVersion = version[index[i]];
-                gitReset(currentVersion, pathRepo, i, total, index[i]);
+                gitReset(currentVersion, pathRepo, i, total-1, index[i]);
 
                 currentNbClass = nbClass(pathRepo);
 
@@ -61,6 +80,7 @@ public class Main {
 
             }
             versionFile.closeWriter();
+            //endregion
 
             deleteGit(pathRepo);
 
@@ -76,11 +96,13 @@ public class Main {
 
         try{
 
-            System.out.println("Git clone en cours ...");
+            System.out.println("+-------------------------------------------------------------+");
+            System.out.println("+ Git clone en cours ...");
             String[] cmd = {"cmd.exe", "/c", "git clone "+url + " " +path};
             Process proc = rt.exec(cmd);
             proc.waitFor();
-            System.out.println("Git clone fini !\n");
+            System.out.println("+ Git clone fini !");
+            System.out.println("+-------------------------------------------------------------+\n");
 
         } catch(Exception e) {
             System.out.println(e);
@@ -96,7 +118,8 @@ public class Main {
 
             ArrayList<String> versionList = new ArrayList<>();
 
-            System.out.println("Git rev-list en cours ...");
+            System.out.println("+-------------------------------------------------------------+");
+            System.out.println("+ Git rev-list en cours ...");
             String[] cmd = {"cmd.exe", "/c", "cd "+path+" && git rev-list master"};
             Process proc = rt.exec(cmd);
             BufferedReader r = new BufferedReader(new InputStreamReader(proc.getInputStream()));
@@ -109,7 +132,8 @@ public class Main {
                 versionList.add(line);
             }
             proc.waitFor();
-            System.out.println("Git rev-list fini !\n");
+            System.out.println("+ Git rev-list fini !");
+            System.out.println("+-------------------------------------------------------------+\n");
             version = new String[versionList.size()];
             for(int i = 0; i < versionList.size(); i++) {
                 version[i] = versionList.get(i);
@@ -128,11 +152,12 @@ public class Main {
 
         try{
 
-            System.out.println("Git reset en cours " + current + " de " + total +"\nNuméro de l'index : "+index+" ...");
+            System.out.println("+-------------------------------------------------------------+");
+            System.out.println("+ Git reset en cours " + current + " de " + total +"\n+ Numéro de l'index : "+index+" ...");
             String[] cmd = {"cmd.exe", "/c", "cd "+path+" && git reset --hard " + version};
             Process proc = rt.exec(cmd);
             proc.waitFor();
-            System.out.println("Git reset terminé !\n");
+            System.out.println("+ Git reset terminé !");
 
         } catch(Exception e) {
             System.out.println(e);
@@ -146,67 +171,17 @@ public class Main {
 
         try{
 
+            System.out.println("+-------------------------------------------------------------+");
             System.out.println("rmdir en cours ...");
             String[] cmd = {"cmd.exe", "/c", "rmdir /s /q "+path};
-            rt.exec(cmd);
-            System.out.println("rmdir fini !\n");
-
-        } catch(Exception e) {
-            System.out.println(e);
-        }
-
-    }
-
-    public static void runMetric(String jarPath, String repoPath, String javaVersion) {
-
-
-        try{
-
-            System.out.println("Calcule des métrique ...");
-
-            Process proc;
-            if(javaVersion.equals("")) {
-                ProcessBuilder pb = new ProcessBuilder("java", "-jar", "IFT3913_TP1.jar",repoPath);
-                pb.directory(new File(jarPath));
-                proc = pb.start();
-            } else {
-                ProcessBuilder pb = new ProcessBuilder(javaVersion, "-jar", "IFT3913_TP1.jar",repoPath);
-                pb.directory(new File(jarPath));
-                proc = pb.start();
-            }
+            Process proc = rt.exec(cmd);
+            System.out.println("rmdir fini !");
             proc.waitFor();
-            System.out.println("Calcule des métriques fini !\n");
+            System.out.println("+-------------------------------------------------------------+\n");
 
         } catch(Exception e) {
             System.out.println(e);
         }
-
-    }
-
-    public static float[] sumMetric() {
-
-        float[] sums = {0,0};
-
-        try{
-
-            FileReader fr = new FileReader("classes.csv");
-            BufferedReader reader = new BufferedReader(fr);
-
-            String s = reader.readLine();
-
-            while((s = reader.readLine()) != null) {
-
-                String[] split = s.split(",");
-                sums[0] += Float.parseFloat(split[5]);
-                sums[1] += Float.parseFloat(split[6]);
-
-            }
-
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-        return sums;
 
     }
 
@@ -238,6 +213,59 @@ public class Main {
         }
 
         return nbClass;
+
+    }
+
+    public static void runMetric(String jarPath, String repoPath, String javaVersion) {
+
+        try {
+
+            System.out.println("+ \tCalcule des métrique ...");
+
+            Process proc;
+            if(javaVersion.equals("")) {
+                ProcessBuilder pb = new ProcessBuilder("java", "-jar", "IFT3913_TP1.jar",repoPath);
+                pb.directory(new File(jarPath));
+                proc = pb.start();
+            } else {
+                ProcessBuilder pb = new ProcessBuilder(javaVersion, "-jar", "IFT3913_TP1.jar",repoPath);
+                pb.directory(new File(jarPath));
+                proc = pb.start();
+            }
+            proc.waitFor();
+            System.out.println("+ \tCalcule des métriques fini !");
+            System.out.println("+-------------------------------------------------------------+\n");
+
+        } catch(Exception e) {
+            System.out.println(e);
+        }
+
+    }
+
+    public static float[] sumMetric() {
+
+        float[] sums = {0,0};
+
+        try{
+
+            FileReader fr = new FileReader("classes.csv");
+            BufferedReader reader = new BufferedReader(fr);
+
+            String s = reader.readLine();
+
+            while((s = reader.readLine()) != null) {
+
+                String[] split = s.split(",");
+                sums[0] += Float.parseFloat(split[5]);
+                sums[1] += Float.parseFloat(split[6]);
+
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return sums;
 
     }
 
