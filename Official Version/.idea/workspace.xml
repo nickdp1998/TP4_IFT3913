@@ -7,12 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89e7da70-a77f-4c25-91fd-dde06c1c4ef8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Testing_maven-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/classes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paquets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/paquets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/versions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/versions.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,22 +107,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1061" y="457" key="FileChooserDialogImpl/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649728340652" />
-    <state width="2517" height="400" key="GridCell.Tab.0.bottom" timestamp="1649729849700">
+    <state width="2517" height="400" key="GridCell.Tab.0.bottom" timestamp="1649730583745">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649729849700" />
-    <state width="2517" height="400" key="GridCell.Tab.0.center" timestamp="1649729849700">
+    <state width="2517" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649730583745" />
+    <state width="2517" height="400" key="GridCell.Tab.0.center" timestamp="1649730583744">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.center/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649729849700" />
-    <state width="2517" height="400" key="GridCell.Tab.0.left" timestamp="1649729849700">
+    <state width="2517" height="400" key="GridCell.Tab.0.center/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649730583744" />
+    <state width="2517" height="400" key="GridCell.Tab.0.left" timestamp="1649730583743">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.left/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649729849700" />
-    <state width="2517" height="400" key="GridCell.Tab.0.right" timestamp="1649729849700">
+    <state width="2517" height="400" key="GridCell.Tab.0.left/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649730583743" />
+    <state width="2517" height="400" key="GridCell.Tab.0.right" timestamp="1649730583745">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649729849700" />
+    <state width="2517" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649730583745" />
     <state x="761" y="276" key="SettingsEditor" timestamp="1649729726538">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

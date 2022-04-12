@@ -158,7 +158,6 @@ public class Main {
             System.out.println("+ Suppression en cours ...");
 
             deleteRec(new File(path));
-            deleteRec(new File(path));
 
             System.out.println("+ Suppression fini !");
             System.out.println("+-------------------------------------------------------------+\n");
