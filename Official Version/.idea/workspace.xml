@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Testing maven:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="89e7da70-a77f-4c25-91fd-dde06c1c4ef8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Repo" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="27fRhPhKXNG1Cau10drnCyhWzJM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Documents/GitHub/TP4_IFT3913" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Testing maven" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;https://github.com/jfree/jfreechart.git&quot;" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89e7da70-a77f-4c25-91fd-dde06c1c4ef8" name="Default Changelist" comment="" />
+      <created>1649709272330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649709272330</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="873" y="360" key="#Project_Structure" timestamp="1649711240011">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="873" y="360" key="#Project_Structure/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649711240011" />
+    <state x="736" y="357" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1649709875782">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="736" y="357" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649709875782" />
+    <state x="1010" y="485" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1649718526556">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="485" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649718526556" />
+    <state x="1061" y="457" key="FileChooserDialogImpl" timestamp="1649728340652">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1061" y="457" key="FileChooserDialogImpl/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649728340652" />
+    <state width="2517" height="400" key="GridCell.Tab.0.bottom" timestamp="1649726963396">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649726963396" />
+    <state width="2517" height="400" key="GridCell.Tab.0.center" timestamp="1649726963396">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="400" key="GridCell.Tab.0.center/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649726963396" />
+    <state width="2517" height="400" key="GridCell.Tab.0.left" timestamp="1649726963396">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="400" key="GridCell.Tab.0.left/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649726963396" />
+    <state width="2517" height="400" key="GridCell.Tab.0.right" timestamp="1649726963396">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649726963396" />
+    <state x="761" y="276" key="SettingsEditor" timestamp="1649718545890">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="761" y="276" key="SettingsEditor/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649718545890" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1649715279093">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649715279093" />
+  </component>
+</project>

@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37996a29-b63c-4e91-a4e4-6cc44a8e8cb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/classes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dev_4_IFT3913/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dev_4_IFT3913/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paquets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/paquets.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/versions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/versions.csv" afterDir="false" />
+    <list default="true" id="2033ff5c-3997-49e8-975c-2a77d63d95e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dev_4_IFT3913.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFT3913_TP1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dev_4_IFT3913/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dev_4_IFT3913/VersionFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dev_4_IFT3913/Writer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/paquets.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VersionFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Writer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/versions.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="27egmfQffRkYVoIi9dobsgMt6Ts" />
+  <component name="ProjectId" id="27g4Ln7a8dhoyEhZEzjvYHJ2jcm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,22 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Dev_4_IFT3913" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;https://github.com/jfree/jfreechart.git&quot;" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Official Version" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -68,58 +56,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="37996a29-b63c-4e91-a4e4-6cc44a8e8cb3" name="Default Changelist" comment="" />
-      <created>1649686125755</created>
+      <changelist id="2033ff5c-3997-49e8-975c-2a77d63d95e2" name="Default Changelist" comment="" />
+      <created>1649728341409</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1649686125755</updated>
+      <updated>1649728341409</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3877" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1649703594343">
-      <screen x="3840" y="0" width="2560" height="1400" />
-    </state>
-    <state x="3877" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649703594343" />
-    <state width="2517" height="400" key="GridCell.Tab.0.bottom" timestamp="1649704785186">
+    <state x="1061" y="457" key="FileChooserDialogImpl" timestamp="1649728351078">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649704785186" />
-    <state width="1235" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.0.2560.1400@3840.0.2560.1400" timestamp="1649687649741" />
-    <state width="2517" height="400" key="GridCell.Tab.0.center" timestamp="1649704785186">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.center/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649704785186" />
-    <state width="1235" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/3840.0.2560.1400@3840.0.2560.1400" timestamp="1649687649740" />
-    <state width="2517" height="400" key="GridCell.Tab.0.left" timestamp="1649704785186">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.left/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649704785186" />
-    <state width="1235" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/3840.0.2560.1400@3840.0.2560.1400" timestamp="1649687649740" />
-    <state width="2517" height="400" key="GridCell.Tab.0.right" timestamp="1649704785186">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649704785186" />
-    <state width="1235" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/3840.0.2560.1400@3840.0.2560.1400" timestamp="1649687649741" />
-    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1649699164139">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649699164139" />
-    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1649699164139">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649699164139" />
-    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1649699164139">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649699164139" />
-    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1649699164139">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649699164139" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1649700090116">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649700090116" />
+    <state x="1061" y="457" key="FileChooserDialogImpl/0.0.2560.1400/3840.0.2560.1400@0.0.2560.1400" timestamp="1649728351078" />
   </component>
 </project>
