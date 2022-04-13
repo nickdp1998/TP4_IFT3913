@@ -1,3 +1,4 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.internal.storage.file.FileRepository;
@@ -52,7 +53,6 @@ public class Main {
 
             version = gitVersion(pathRepo, git);
             int nbVersion = version.length;
-            System.out.println(nbVersion);
 
             //region Choix des versions
             total = Math.min(total, nbVersion);
@@ -62,12 +62,14 @@ public class Main {
             //Random si moins de 50% du nb de version, sinon distances égales
             if((float) total < 0.5*((float) nbVersion)) {
                 for (int i = 0; i < total; i++) {
+
                     int currentRandom = r.nextInt(nbVersion);
-                    if (Arrays.asList(index).contains(currentRandom)) {
-                        i--;
-                    } else {
-                        index[i] = currentRandom;
+                    while (arraysContains(index, currentRandom, i)) {
+                        currentRandom = r.nextInt(nbVersion);
                     }
+
+                    index[i] = currentRandom;
+
                 }
                 Arrays.sort(index);
             } else {
@@ -98,6 +100,8 @@ public class Main {
             versionFile.closeWriter();
             git.close();
             deleteGit(pathRepo);
+            (new File(currentPath + "/paquets.csv")).delete();
+            (new File(currentPath + "/classes.csv")).delete();
 
         } catch(Exception e) {
             System.out.println(e);
@@ -175,6 +179,16 @@ public class Main {
             }
         }
         file.delete();
+    }
+
+    public static Boolean arraysContains(int[] array, int element, int maxIndex) {
+
+        for(int i = 0; i < maxIndex; i++)
+            if(array[i] == element)
+                return true;
+
+        return false;
+
     }
 
     public static int nbClass(String path) {

@@ -27,6 +27,11 @@ plot(xAxis,mWMC,main = "Évolution de mWMC dans le temps")
 #mcBC
 plot(xAxis,mcBC,main = "Évolution de mcBC dans le temps")
 
+#-------------------------------------------------------------------------------
+#
+# Peut-être utile pour la question 5
+#
+#-------------------------------------------------------------------------------
 
 # #Boxplot de NC
 # boxplot(NC, main = "NC",
