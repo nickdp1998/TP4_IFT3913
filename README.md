@@ -10,6 +10,7 @@ Notes générales
     - Les fichiers proto.jar, IFT3913_TP1.jar et config.properties doivent se trouver dans le même dossier pour l'éxecution (valide pour les 2 versions)
     - Pour exécuter :
           java -jar proto.jar <url du repo>
+    - Le dossier stats contient un fichier R permettant de visualiser l'évolution des métriques au fil du temps et de calculer des corrélations
 
 
 Config.properties
