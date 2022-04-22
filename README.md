@@ -15,9 +15,8 @@ Notes générales
 
 Config.properties
 
-    - root : utilisé par IFT3913_TP1.jar (sans importance)
-    - javaPath : spécifier le chemin de Java s'il y a une erreur de version lors de l'éxecution
-    - sampleSize : taille de l'échantillon à analyser dans l'historique des commits
-
-
-
+<ul>
+    <li>root : utilisé par IFT3913_TP1.jar (sans importance)</li>
+    <li>javaPath : spécifier le chemin de Java s'il y a une erreur de version lors de l'éxecution</li>
+    <li>sampleSize : taille de l'échantillon à analyser dans l'historique des commits</li>
+</ul>
