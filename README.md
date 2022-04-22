@@ -8,8 +8,8 @@ Notes générales
     <li>La versions "First Version" est uniquement fonctionnel sur Windows et utilise seulement des exec.</li>
     <li>La version "Official Version" est compatible sur Windows/Linux/MacOs et utilise JGit.</li>
     <li>Les fichiers proto.jar, IFT3913_TP1.jar et config.properties doivent se trouver dans le même dossier pour l'éxecution (valide pour les 2 versions).</li>
-    <li>Pour exécuter :
-          java -jar proto.jar <url du repo></li>
+    <li>Pour exécuter :<br />
+          java -jar proto.jar \<url du repo\></li>
     <li>Le dossier stats contient un fichier R permettant de visualiser l'évolution des métriques au fil du temps et de calculer des corrélations.</li>
 </ul>
 
