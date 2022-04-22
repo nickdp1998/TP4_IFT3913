@@ -5,6 +5,7 @@ Le but de ce projet est de créer une application qui calcule les métriques mWM
 # Guide d'utilisation 
 Notes générales
 <ul>
+    <li>La versions "First Version" est uniquement fonctionnel sur Windows et utilise seulement des exec. </li>
     - La versions "First Version" est uniquement fonctionnel sur Windows et utilise seulement des exec.
     - La version "Official Version" est compatible sur Windows/Linux/MacOs et utilise JGit.
     - Les fichiers proto.jar, IFT3913_TP1.jar et config.properties doivent se trouver dans le même dossier pour l'éxecution (valide pour les 2 versions)
