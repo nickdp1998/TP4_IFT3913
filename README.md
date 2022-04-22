@@ -1,6 +1,6 @@
 # Analyse repo github
 Projet dans le cadre du cours IFT3913.<br />
-Le but de ce projet est de créer une application qui calcule les métriques mWMC (moyenne des complexités cyclomatiques de McCabe sur toutes les classes) et mcBC (moyenne de DC / WMC, avec DC étant la densité de commentaire en terme de lignes) pour différent commit d'un repo github.
+Le but de ce projet est de créer une application qui calcule les métriques mWMC (moyenne des complexités cyclomatiques de McCabe sur toutes les classes) et mcBC (moyenne de DC / WMC sur toutes les classes, avec DC étant la densité de commentaire en terme de lignes) pour différent commit d'un repo github.
 
 # Guide d'utilisation 
 Notes générales
