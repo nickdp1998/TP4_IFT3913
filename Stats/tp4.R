@@ -29,39 +29,46 @@ plot(xAxis,mcBC,main = "Évolution de mcBC dans le temps")
 
 #-------------------------------------------------------------------------------
 #
-# Peut-être utile pour la question 5
+# Question 5 : Analyse des hypothèses
 #
 #-------------------------------------------------------------------------------
 
-# #Boxplot de NC
-# boxplot(NC, main = "NC",
-#         xlab = "Nombre de classes",
-#         col = "Orange",
-#         border = "Red",
-#         horizontal = TRUE,
-#         notch = TRUE)
-# text(x = boxplot.stats(NC)$stats, labels = boxplot.stats(NC)$stats,
-#      y = 1.25)
-# 
-# #Boxplot de mWMC
-# boxplot(mWMC, main = "mWMC",
-#         xlab = "Moyenne de la métrique WMC",
-#         col = "Orange",
-#         border = "Red",
-#         horizontal = TRUE,
-#         notch = TRUE,
-# 	outline = FALSE)
-# text(x = round(boxplot.stats(mWMC)$stats, digits = 3), labels = round(boxplot.stats(mWMC)$stats, digits = 3),
-#      y = 1.25)
-# 
-# #Boxplot de mcBC
-# boxplot(mcBC, main = "mcBC",
-#         xlab = "Moyenne de la métrique classe_BC",
-#         col = "Orange",
-#         border = "Red",
-#         horizontal = TRUE,
-#         notch = TRUE,
-#  	outline = FALSE)
-# text(x = round(boxplot.stats(mcBC)$stats, digits = 3), labels = round(boxplot.stats(mcBC)$stats, digits = 3),
-#      y = 1.25)
+#Boxplot de NC
+boxplot(NC, main = "NC",
+        xlab = "Nombre de classes",
+        col = "Orange",
+        border = "Red",
+        horizontal = TRUE,
+        notch = TRUE)
+
+#Boxplot de mWMC
+boxplot(mWMC, main = "mWMC",
+        xlab = "Moyenne de la métrique WMC",
+        col = "Orange",
+        border = "Red",
+        horizontal = TRUE,
+        notch = TRUE,
+	outline = TRUE)
+
+#Boxplot de mcBC
+boxplot(mcBC, main = "mcBC",
+        xlab = "Moyenne de la métrique classe_BC",
+        col = "Orange",
+        border = "Red",
+        horizontal = TRUE,
+        notch = TRUE,
+ 	outline = TRUE)
+
+#Spearman pour NC et mWMC
+cor.test(NC,mWMC,method = "spearman",exact=FALSE)
+
+#Graphe de mWMC en fonction de NC
+plot(NC,mWMC,main = "mWMC en fonction de NC")
+
+#Spearman pour NC et mcBC
+cor.test(NC,mcBC,method = "spearman",exact=FALSE)
+
+#Graphe de mcBC en fonction de NC
+plot(NC,mcBC,main = "mcBC en fonction de NC")
+
 
